@@ -1,10 +1,10 @@
-infp=['I', 'N', 'F', 'P']
-estj=['E', 'S', 'T', 'J']
+mbti = input().strip()
 
-name=input()
-for i in range(4):
-    cur=name[i]
-    if cur in infp:
-        print(estj[i], end='')
-    else:
-        print(infp[i], end='')
+opposite = {
+    'E': 'I', 'I': 'E',
+    'S': 'N', 'N': 'S',
+    'T': 'F', 'F': 'T',
+    'J': 'P', 'P': 'J'
+}
+ideal=''.join(opposite[i] for i in mbti)
+print(ideal)
