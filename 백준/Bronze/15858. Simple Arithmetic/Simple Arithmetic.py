@@ -1,5 +1,8 @@
 import sys
 input = sys.stdin.readline
+from decimal import Decimal, getcontext
 
-a, b, c = map(float, input().split())
+getcontext().prec = 30 # 소수점 정밀도 설정
+
+a, b, c = map(Decimal, input().split())
 print(a*b/c)
