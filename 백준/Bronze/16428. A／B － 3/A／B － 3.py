@@ -1,6 +1,10 @@
 import sys
 input = sys.stdin.readline
 
-a, b = map(int, input().split())
-print(a//b)
-print(a%b)
+A, B = map(int, input().split())
+if B > 0:
+    print(A//B)
+    print(A%B)
+else:
+    print(-(A//-B))
+    print(A%-B)
