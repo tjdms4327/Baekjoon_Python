@@ -1,8 +1,13 @@
-n,m=map(int,input().split())
-a=[];x=0
-for i in range(n):
-    a.append(input())
-for j in range(m):
-    if input() in a:
-        x+=1
-print(x)
+# silverIV_14425
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+textList = set([input() for _ in range(n)])
+
+count = 0
+for _ in range(m):
+    subText = input()
+    if subText in textList:
+        count += 1
+print(count)
