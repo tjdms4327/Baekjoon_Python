@@ -1,12 +1,17 @@
-t=int(input())
+# silverV_1010
+import sys
+input = sys.stdin.readline
 
-def fac(x):
-    a=1
-    for i in range(1,x+1):
-       a*=i
-    return a
+D = [[0 for j in range(31)] for i in range(31)]
+for i in range(0, 31):
+    D[i][0] = 1
+    D[i][1] = i
+    D[i][i] = 1
+for i in range(2, 31):
+    for j in range(1, i):
+        D[i][j] = D[i-1][j] + D[i-1][j-1]
 
-for _ in range(t):
-    n,m=map(int,input().split())
-    nn=fac(n) ; mm=fac(m) ; mn=fac(m-n)
-    print(mm//(nn*mn))
+t = int(input())
+for i in range(0, t):
+    n, m = map(int, input().split())
+    print(D[m][n])
