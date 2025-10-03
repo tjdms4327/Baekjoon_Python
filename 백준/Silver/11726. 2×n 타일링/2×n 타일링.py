@@ -1,13 +1,10 @@
-import sys
-input=sys.stdin.readline
+# silverIII_11726
+mod = 10007
+n = int(input())
+D = [0] * 1001
+D[1] = 1
+D[2] = 2
 
-n=int(input())
-dp=[0]*(n+1)
-
-if n==1:
-    print(1)
-else:
-    dp[1],dp[2]=1,2
-    for i in range(3,n+1):
-        dp[i]=dp[i-2]+dp[i-1]
-    print(dp[n]%10007)
+for i in range(3, n+1):
+    D[i] = (D[i-1] + D[i-2]) % mod
+print(D[n])
