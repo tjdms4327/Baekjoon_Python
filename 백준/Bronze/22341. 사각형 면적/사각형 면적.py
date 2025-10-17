@@ -8,12 +8,14 @@ a, b = n, n
 for i in range(c):
     x, y = map(int, input().split())
     
-    if x > a or y > b:
+    if x >= a or y >= b:
         continue
-    area_up = a * y
-    area_left = b * x
-    if area_up >= area_left:
+    
+    area_horizontal = x * b 
+    area_vertical = a * y 
+    if area_vertical > area_horizontal:
         b = y
     else:
         a = x
-print(a*b)
+        
+print(a * b)
