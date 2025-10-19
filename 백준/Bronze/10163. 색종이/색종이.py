@@ -8,13 +8,12 @@ n = int(input())
 for case in range(1, 1+n):
     x, y, wide, height = map(int, input().split())
     
-    for row in range(x, x+wide):
-        for col in range(y , y+height):
-            matrix[row][col] = case
+    for i in range(x, x + wide):
+        matrix[i][y:y + height] = [case] * height
 
 
 for case in range(1, n+1):
-    count = 0
+    cnt = 0
     for i in range(1001):
-        count += matrix[i].count(case)
-    print(count)
+        cnt += matrix[i].count(case)
+    print(cnt)
