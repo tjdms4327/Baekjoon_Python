@@ -8,7 +8,6 @@ for case in range(1, 1+t):
     count = 0
     for x in range(a):
         for y in range(b):
-            result = int(bin(x & y)[2:], 2)
-            if result < k:
+            if (x & y) < k:
                 count += 1
     print(f'Case #{case}: {count}')
