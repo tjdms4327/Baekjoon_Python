@@ -25,4 +25,4 @@ for i in range(n-2):
     if not closest:
         break
 
-print(*best)
+print(*best) 
