@@ -7,4 +7,4 @@ xy.sort()
 
 for i in xy:
     print(*i, end=' ')
-    print()
+    print()  
