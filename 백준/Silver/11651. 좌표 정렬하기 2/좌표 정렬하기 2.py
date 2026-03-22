@@ -7,4 +7,4 @@ for i in range(n):
 xy.sort()
 
 for i in xy:
-    print(i[1], i[0])
+    print(i[1], i[0])  
