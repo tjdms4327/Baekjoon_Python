@@ -4,7 +4,11 @@ input = sys.stdin.readline
 n = int(input())
 A = list(map(int, input().split()))
 
-if sum(A)%3==0 and A.count(2)<A.count(1):
-    print('Yes')
+total = sum(A)
+cnt1 = A.count(1)
+cnt2 = A.count(2)
+
+if total % 3 == 0 and cnt2 <= cnt1:
+    print("Yes")
 else:
-    print('No')
+    print("No")
